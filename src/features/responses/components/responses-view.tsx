@@ -50,9 +50,12 @@ export function ResponsesView({
         icon={<InboxIcon />}
         title="No responses yet"
         action={
-          <Button variant="outline" onClick={() => startRefresh(() => router.refresh())} disabled={refreshing}>
-            <RefreshIcon className={refreshing ? "animate-spin" : ""} /> Check again
-          </Button>
+          <div className="flex flex-wrap justify-center gap-2">
+            {sheets}
+            <Button variant="outline" onClick={() => startRefresh(() => router.refresh())} disabled={refreshing}>
+              <RefreshIcon className={refreshing ? "animate-spin" : ""} /> Check again
+            </Button>
+          </div>
         }
       >
         Use Send to share the form link. Responses appear here, and in Google Sheets once you link one.
