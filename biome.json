@@ -1,0 +1,15 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "files": { "includes": ["src/**", "!src/components/ui", "!**/*.css"] },
+  "formatter": { "enabled": false },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "suspicious": { "noArrayIndexKey": "off" },
+      "style": { "noNonNullAssertion": "off" },
+      "a11y": { "noSvgWithoutTitle": "off", "noLabelWithoutControl": "off" }
+    }
+  },
+  "assist": { "enabled": false }
+}

@@ -1,0 +1,10 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment: { POSTGRES_USER: formloom, POSTGRES_PASSWORD: formloom, POSTGRES_DB: formloom }
+    ports: ["127.0.0.1:5452:5432"] # local only; never publish in prod
+    volumes: [pgdata:/var/lib/postgresql/data]
+  redis:
+    image: valkey/valkey:8-alpine
+    ports: ["127.0.0.1:6395:6379"] # local only
+volumes: { pgdata: {} }
