@@ -25,7 +25,7 @@ Gate: `bun run check && bun run build`, then drive the flow in headless Playwrig
 - [x] Live AI call with the Anthropic key now in .env.local. A vendor-onboarding prompt returned a title, 4 fields, questions and suggestions. The in-app action was not clicked in a browser.
 - [x] Resend test mail accepted (HTTP 200) using RESEND_API_KEY and MAIL_FROM now in .env.local.
 - [ ] Real Google Sheet round trip. No OAuth client is registered for http://localhost:3000/api/integrations/google/callback.
-- [ ] Publish the repo. formloom is not a git repo and gh is not logged in.
+- [x] Published at https://github.com/TheDivyanshShukla/formloom (main, public). .env.local was not committed.
 - [x] Direct "Link to Sheets" (OAuth, drive.file) with append + resync (swarm T1; real Google round trip untested)
 - [x] Spreadsheet-style responses grid (swarm T2)
 - [x] Client IP per TRUST_PROXY; webhook SSRF guard + 3 attempts (swarm T3)
